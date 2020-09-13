@@ -1,0 +1,85 @@
+<!-- Music Credit: Royalty Free Music from Bensound -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: linear-gradient(deeppink, cyan);
+            padding-top: 15px;
+            width: 125px;
+            height: 365px;
+            text-align: center;
+        }
+
+        #imageContainer {
+            height: 140px;
+        }
+
+        #catEyes {
+            position: fixed;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            left: 30px;
+            bottom: 270px;
+            z-index: 1;
+        }
+
+        #clickTheCatImage {
+            position: relative;
+            transition: width 0.5s;
+            z-index: 10;
+        }
+
+        #clickTheCatImage:focus {
+            outline: none;
+            position: relative;
+            transition: width 0.5s;
+            z-index: 10;
+        }
+
+        i {
+            font-size: 50px;
+            transition: transform 0.25s;
+        }
+
+        #catPartyText {
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 5px;
+            margin: 10px 0px 5px 0px;
+        }
+        #warningHeading {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+            margin: 5px 0px;
+        }
+        #warningText {
+            font-family: Arial, Helvetica, sans-serif;
+            color: blue;
+            margin: 0px;
+        }
+    </style>
+    <link rel="stylesheet" href="all.min.css">
+    <meta charset="UTF-8">
+    <title>Cat Party</title>
+</head>
+
+<body>
+    <audio id="sound" src="cat-sound-effect.mp3" type="audio/mpeg"></audio>
+    <audio id="howl" src="cat-howl.mp3" type="audio/mpeg"></audio>
+    <div id="imageContainer">
+        <div id="catEyes" style="background:yellow;"></div>
+        <img tabindex="0" aria-label="Warning loud music will play when you click this" id="clickTheCatImage" style="width:100px;" src="https://i.imgur.com/6OK65Iu.png" />
+    </div>
+    <i id="faArrowUp" class="fas fa-arrow-up" style="color:red;"></i>
+    <p id="catPartyText" style="color:red;">CAT PARTY!</p>
+    <i id="faVolumeDown" class="fas fa-volume-down" style="color:red;"></i>
+    <p id="warningHeading">WARNING:</p>
+    <p id="warningText">Lower speaker volume BEFORE clicking cat.</p>
+    <script src="popup.js" charset="UTF-8"></script>
+</body>
+
+</html>
